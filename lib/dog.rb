@@ -1,1 +1,30 @@
 # Add your code here
+
+require 'pry'
+
+class Dog
+  @@all = []
+
+  def initialize(name)
+    @name = self
+    @@all << @name
+  end
+
+  def self.all
+    return @@all
+  end
+
+  def name
+    @name
+  end
+
+  def self.clear_all
+    @@all = []
+  end
+
+  def self.print_all
+    @@all.each do |dog|
+      puts dog
+    end
+  end
+end
